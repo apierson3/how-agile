@@ -26,7 +26,7 @@ function Navbar({ isAuth, setIsAuth }) {
   return (
     <div className="navbar-container">
       <img className="navbar-img" src={Logo} alt="Logo" />
-      <h1 className="navbar-logo">MoVert</h1>
+      <h1 className="navbar-logo">HowAgile</h1>
       <div className="navbar-links-container">
         <ul className="navbar-links">
           <li><Link to="/">Home</Link></li>
