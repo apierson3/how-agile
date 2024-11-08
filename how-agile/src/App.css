@@ -1,3 +1,14 @@
+body {
+  height: 125vh;
+  background-image: url('./images/Background.jpg');
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 80px;
+  padding: 30px;
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center; /* Center the image */
+}
+
 .App {
   text-align: center;
 }

@@ -1,0 +1,154 @@
+/* src/Navbar.css */
+
+.navbar * {
+    display: inline;
+  }
+
+  .navbar-img {
+    height: 80px;
+    margin-left: 20px;
+    align-items: center;
+  }
+
+  .navbar-container {
+    display: flex;
+    height: 100px;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    justify-content: space-between;
+    z-index: 999; /* Ensure this is high enough */
+  }
+  
+  .navbar-logo {
+    color: #000000;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    display: inline;
+    margin-left: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+  }
+  
+  .navbar-links-container {
+    display: flex;
+     /* Center the links */
+    flex-grow: 1; /* Allow the container to grow */
+    align-items: center;
+    justify-content: center;
+    margin-left: -200px;
+    z-index: 999; /* Ensure this is high enough */
+}
+
+.navbar-links {
+  list-style: none;
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+   width: 100%; /* Center links in the available space */
+}
+  
+  .navbar-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0.5rem 1rem;
+    margin: 25px;
+  }
+
+
+ /* Responsive design */
+@media (max-width: 768px) {
+  .navbar-container {
+      flex-direction: column;
+  }
+
+  .navbar-links {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: auto;
+  white-space: nowrap;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 999; /* Ensure this is high enough */
+  right: 0; /* Align dropdown to the right edge */
+  /* left: auto; */
+}
+
+.dropdown-content a, .dropdown-content button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  z-index: 999; /* Ensure this is high enough */
+  text-align: left; /* Align text to the left */
+}
+
+.dropdown-content a:hover, .dropdown-content button:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  z-index: 999; /* Ensure this is high enough */
+}
+
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  /* margin: 25px; */
+}
+
+.logout-button:hover {
+  color: #007bff;
+}
+
+.logout-button svg {
+  margin-right: 5px; /* Add some space between the icon and text */
+}
+
+.navbar-account {
+  margin-left: auto; /* Push account items to the far right */
+  display: flex;
+  padding-right: 30px;
+  align-items: center;
+}
+
+.dropbtn {
+  display: flex;
+  align-items: center; /* Ensure items are centered horizontally */
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  color: #131313;
+}
+
+.dropbtn svg {
+  margin-left: 5px; /* Add space between Account text and icon */
+}
