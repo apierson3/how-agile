@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignOutAlt, faUser, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
-import Logo from './logo.svg';
+import Logo from './logo.png';
 import { signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { auth } from './firebase-config';
@@ -31,7 +31,7 @@ function Navbar({ isAuth, setIsAuth }) {
         <ul className="navbar-links">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
-          <li><Link to="/products">Products</Link></li>
+          <li><Link to="/assessment">Assessments</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
         <div className='navbar-account'>

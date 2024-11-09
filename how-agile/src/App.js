@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Home from './Home';
 import Login from './Login';
 import './App.css';
+import Assessments from './Assessments.js';
  
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth") === "true");
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home isAuth={isAuth} />} />
         <Route path="/login" element={<Login setIsAuth={setIsAuth}/>}/>
         <Route path="*" element={<Home isAuth={isAuth} />} /> {/* Catch-all route */}
+        <Route path="/assessments" element={<Assessments isAuth={isAuth} />} />
       </Routes>
     </Router>
   );
