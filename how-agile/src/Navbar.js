@@ -31,7 +31,7 @@ function Navbar({ isAuth, setIsAuth }) {
         <ul className="navbar-links">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
-          <li><Link to="/assessment">Assessments</Link></li>
+          <li><Link to="/assessments">Assessments</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
         <div className='navbar-account'>
