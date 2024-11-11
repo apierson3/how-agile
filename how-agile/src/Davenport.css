@@ -1,0 +1,58 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Optional: Limit the maximum width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+  }
+  
+  .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Adjust this value as needed for vertical spacing */
+    width: 100%;
+  }
+  
+  label {
+    width: 150px; /* Adjust this value to control the label width */
+    margin-right: 10px; /* Add space between the label and the input */
+  }
+  
+  select, input[type="text"], input[type="email"] {
+    flex: 1; /* Allow the inputs to take the remaining space */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px; /* Add space between inputs */
+  }
+  
+  .form-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .form-button:hover {
+    background-color: #45a049; /* Slightly darker shade on hover */
+  }
+  
+
+  .results-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-items: center;
+    display: flex;
+  }
