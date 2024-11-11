@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/how-agile/static/css/main.7c6da107.css",
-    "main.js": "/how-agile/static/js/main.3c29a8ed.js",
+    "main.css": "/how-agile/static/css/main.e5303238.css",
+    "main.js": "/how-agile/static/js/main.cb8664b9.js",
     "static/js/453.952480f8.chunk.js": "/how-agile/static/js/453.952480f8.chunk.js",
     "static/media/Background.jpg": "/how-agile/static/media/Background.0e5e45daf62c67fed028.jpg",
     "static/media/logo.png": "/how-agile/static/media/logo.8c05bf534dad822c00f1.png",
     "index.html": "/how-agile/index.html",
-    "main.7c6da107.css.map": "/how-agile/static/css/main.7c6da107.css.map",
-    "main.3c29a8ed.js.map": "/how-agile/static/js/main.3c29a8ed.js.map",
+    "main.e5303238.css.map": "/how-agile/static/css/main.e5303238.css.map",
+    "main.cb8664b9.js.map": "/how-agile/static/js/main.cb8664b9.js.map",
     "453.952480f8.chunk.js.map": "/how-agile/static/js/453.952480f8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c6da107.css",
-    "static/js/main.3c29a8ed.js"
+    "static/css/main.e5303238.css",
+    "static/js/main.cb8664b9.js"
   ]
 }
