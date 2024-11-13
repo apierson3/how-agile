@@ -32,7 +32,7 @@ function Navbar({ isAuth, setIsAuth }) {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/assessments">Assessments</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/results">Results</Link></li>
         </ul>
         <div className='navbar-account'>
           {!isAuth ? (
