@@ -18,10 +18,8 @@
 }
 
 label {
-  width: 100%; /* Make label take full width */
-  max-width: 900px; /* Set a fixed max-width for labels */
+  width: 900px; /* Make label take full width */
   margin-bottom: 5px; /* Add space below the label */
-  box-sizing: border-box; /* Include padding and border in the element's total width */
 }
 
 select, input[type="text"], input[type="email"] {
