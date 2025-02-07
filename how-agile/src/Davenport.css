@@ -17,7 +17,7 @@
   width: 100%;
 }
 
-label {
+.label {
   display: block;
   width: 900px; /* Make label take full width */
   margin-bottom: 5px; /* Add space below the label */
