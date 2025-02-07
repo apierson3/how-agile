@@ -107,7 +107,7 @@ const Davenport = () => {
     ) : (   
     <form onSubmit={handleSubmit} className="form-container">
       <div className="form-row">
-        <label>Data:</label>
+        <label>The quality, organization, and utilization of data in your company is best described as follows:</label>
         <select value={data} onChange={(e) => setData(e.target.value)} required>
           <option value="" disabled>Select an option</option>
           <option value="Analytically Impaired">Inconsistent, poor quality, poorly organized</option>
@@ -118,14 +118,14 @@ const Davenport = () => {
         </select>
       </div>
       <div className="form-row">
-        <label>Data Description:</label>
+        <label>In your own words, describe the quality, organization, and utilization of data at your company:</label>
         <input type="text" value={EnterpriseDescription} onChange={(e) => setEnterpriseDescription(e.target.value)} className="form-input" required />
       </div>
       <div className="form-row">
-        <label>Enterprise:</label>
+        <label>The adoption of data technology and the management of data across your company enterprise is best described as follows:</label>
         <select value={enterprise} onChange={(e) => setEnterprise(e.target.value)} required>
           <option value="" disabled>Select an option</option>
-          <option value="Analytically Impaired">n/a</option>
+          <option value="Analytically Impaired">Little to no expertise of data within the organization</option>
           <option value="Localized Analytics">Islands of data, technology, and expertise</option>
           <option value="Analytical Aspirations">Early stages of an enterprise‐wide approach</option>
           <option value="Analytical Companies">Key data, technology and analysts are centralized or networked</option>
@@ -133,11 +133,11 @@ const Davenport = () => {
         </select>
       </div>
       <div className="form-row">
-        <label>Enterprise Description:</label>
+        <label>In your own words, how would you describe the adoption of data technology and the management of data across your company enterprise:</label>
         <input type="text" value={LeadershipDescription} onChange={(e) => setLeadershipDescription(e.target.value)} className="form-input" required />
       </div>
       <div className="form-row">
-        <label>Leadership:</label>
+        <label>Leadership's awareness and interest in developing data competencies in your company is best described as follows:</label>
         <select value={leadership} onChange={(e) => setLeadership(e.target.value)} required>
           <option value="" disabled>Select an option</option>
           <option value="Analytically Impaired">No awareness or interest</option>
@@ -148,11 +148,11 @@ const Davenport = () => {
         </select>
       </div>
       <div className="form-row">
-        <label>Leadership Description:</label>
+        <label>In your own words, describe Leadership's awareness and interest in developing data competencies in your company:</label>
         <input type="text" value={TargetsDescription} onChange={(e) => setTargetsDescription(e.target.value)} className="form-input" required />
       </div>
       <div className="form-row">
-        <label>Targets:</label>
+        <label>Use of data in driving decisions in your company is best described as follows:</label>
         <select value={targets} onChange={(e) => setTargets(e.target.value)} required>
           <option value="" disabled>Select an option</option>
           <option value="Analytically Impaired">n/a</option>
@@ -163,26 +163,26 @@ const Davenport = () => {
         </select>
       </div>
       <div className="form-row">
-        <label>Targets Description:</label>
+        <label>In your own words, how is data used to drive decisions in your company:</label>
         <input type="text" value={TechnologyDescription} onChange={(e) => setTechnologyDescription(e.target.value)} className="form-input" required />
       </div>
       <div className="form-row">
-        <label>Technology:</label>
+        <label>The extent of data technologies in your company is best described as follows:</label>
         <select value={technology} onChange={(e) => setTechnology(e.target.value)} required>
           <option value="" disabled>Select an option</option>
-          <option value="Analytically Impaired">Option1</option>
-          <option value="Localized Analytics">Option2</option>
-          <option value="Analytical Aspirations">Option3</option>
-          <option value="Analytical Companies">Option4</option>
-          <option value="Analytical Competitors">Option5</option>
+          <option value="Analytically Impaired">Rely on basic spreadsheets and manual processes with poor data governance</option>
+          <option value="Localized Analytics">Use standalone BI tools like Excel, Power BI, or Tableau in silos</option>
+          <option value="Analytical Aspirations">Centralized data warehouses or lakes and advanced tools like SQL, Python, and R</option>
+          <option value="Analytical Companies">Analytics is integrated into core business processes using machine learning, predictive analytics, and real-time tools</option>
+          <option value="Analytical Competitors">Leverage cutting-edge technologies such as distributed data processing, cloud resources, blockchain, and IoT devices for driving competitive advantage</option>
         </select>
       </div>
       <div className="form-row">
-        <label>Technology Description:</label>
+        <label>In your own words, how would you describe the investment in technolofy to support your company's data needs:</label>
         <input type="text" value={AnalystsDescription} onChange={(e) => setAnalystsDescription(e.target.value)} className="form-input" required />
       </div>
       <div className="form-row">
-        <label>Analysts:</label>
+        <label>The depth and level of data expertise and talent in your company is best described as follows:</label>
         <select value={analysts} onChange={(e) => setAnalysts(e.target.value)} required>
           <option value="" disabled>Select an option</option>
           <option value="Analytically Impaired">Few skills, and these attached to specific functions</option>
@@ -193,7 +193,7 @@ const Davenport = () => {
         </select>
       </div>
       <div className="form-row">
-        <label>Analysts Description:</label>
+        <label>In your own words, how would you describe the depth and level of data expertise in your company:</label>
         <input type="text" value={DataDescription} onChange={(e) => setDataDescription(e.target.value)} className="form-input" required />
       </div>
       <button type="submit" className="form-button">Submit</button>
