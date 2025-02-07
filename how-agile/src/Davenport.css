@@ -14,7 +14,7 @@
   flex-direction: column; /* Stack label and input/dropdown vertically */
   align-items: flex-start; /* Align items to the start */
   margin-bottom: 15px;
-  width: 100%;
+  width: 900px;
 }
 
 label {
