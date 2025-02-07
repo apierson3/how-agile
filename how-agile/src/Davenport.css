@@ -17,7 +17,7 @@
   width: 900px;
 }
 
-#form-row label {
+#form-container label {
   display: inline-block;
   margin-bottom: 10px; /* Add space below the input/dropdown */
   width: 900px; /* Make input and dropdown take full width */
