@@ -18,7 +18,9 @@
 }
 
 label {
+  width: 100%; /* Make label take full width */
   margin-bottom: 5px; /* Add space below the label */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
 }
 
 select, input[type="text"], input[type="email"] {
@@ -27,6 +29,7 @@ select, input[type="text"], input[type="email"] {
   border: 1px solid #ccc;
   margin-bottom: 10px; /* Add space below the input/dropdown */
   width: 100%; /* Make input and dropdown take full width */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
 }
 
 .form-button {
