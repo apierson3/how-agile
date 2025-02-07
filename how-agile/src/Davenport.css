@@ -12,6 +12,7 @@
 .form-row {
   display: flex;
   flex-direction: column; /* Stack label and input/dropdown vertically */
+  align-items: flex-start; /* Align items to the start */
   margin-bottom: 15px;
   width: 100%;
 }
@@ -25,6 +26,7 @@ select, input[type="text"], input[type="email"] {
   border-radius: 5px;
   border: 1px solid #ccc;
   margin-bottom: 10px; /* Add space below the input/dropdown */
+  width: 100%; /* Make input and dropdown take full width */
 }
 
 .form-button {
