@@ -18,12 +18,9 @@
 }
 
 label {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  display: inline-block;
   margin-bottom: 10px; /* Add space below the input/dropdown */
   width: 900px; /* Make input and dropdown take full width */
-  max-width: 900px; /* Set a fixed max-width for inputs and dropdowns */
   box-sizing: border-box; /* Include padding and border in the element's total width */
 }
 
