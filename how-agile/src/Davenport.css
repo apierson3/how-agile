@@ -5,30 +5,26 @@
   background-color: #f0f0f0;
   padding: 20px;
   border-radius: 10px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-  max-width: 1200px; /* Optional: Limit the maximum width of the form */
-  margin: 0 auto; /* Center the form horizontally */
+  max-width: 1800px;
+  margin: 0 auto;
 }
 
 .form-row {
   display: flex;
-  align-items: center;
-  margin-bottom: 15px; /* Adjust this value as needed for vertical spacing */
+  flex-direction: column; /* Stack label and input/dropdown vertically */
+  margin-bottom: 15px;
   width: 100%;
-  justify-content: flex-start; /* Ensure items are aligned at the start */
 }
 
 label {
-  width: 150px; /* Adjust this value to control the label width */
-  margin-right: 10px; /* Add space between the label and the input */
+  margin-bottom: 5px; /* Add space below the label */
 }
 
 select, input[type="text"], input[type="email"] {
-  flex: 1; /* Allow the inputs to take the remaining space */
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  margin-right: 10px; /* Add space between inputs */
+  margin-bottom: 10px; /* Add space below the input/dropdown */
 }
 
 .form-button {
@@ -42,7 +38,7 @@ select, input[type="text"], input[type="email"] {
 }
 
 .form-button:hover {
-  background-color: #45a049; /* Slightly darker shade on hover */
+  background-color: #45a049;
 }
 
 .results-button {
