@@ -106,6 +106,13 @@ const Davenport = () => {
       </div>
     ) : (   
     <form onSubmit={handleSubmit} className="form-container">
+      <h1>Davenport Data Maturity Assessment</h1>
+      <p>The objective of completion of the following data assessment is to understand the current state
+          of your organization as it relates to data maturity and to determine actionable gaps that will
+          advance the data maturity of your organization. The assessment is based on the widely known
+          Davenport model with organizational data maturity ranging across five levels – from the lowest
+          level of maturity (Analytically Impaired) to the highest level of maturity (Analytical Competitors).
+      </p>
       <div className="form-row">
         <label>The quality, organization, and utilization of data in your company is best described as follows:</label>
         <select value={data} onChange={(e) => setData(e.target.value)} required>
@@ -155,7 +162,7 @@ const Davenport = () => {
         <label>Use of data in driving decisions in your company is best described as follows:</label>
         <select value={targets} onChange={(e) => setTargets(e.target.value)} required>
           <option value="" disabled>Select an option</option>
-          <option value="Analytically Impaired">n/a</option>
+          <option value="Analytically Impaired">Little to no expertise of data within the organization</option>
           <option value="Localized Analytics">Multiple disconnected targets that may not be strategically important</option>
           <option value="Analytical Aspirations">Analytical efforts coalescing behind a small set of targets</option>
           <option value="Analytical Companies">Analytical activity centered on a few key domains</option>

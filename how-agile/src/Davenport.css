@@ -5,31 +5,43 @@
   background-color: #f0f0f0;
   padding: 20px;
   border-radius: 10px;
-  max-width: 1800px;
+  max-width: 75%;
   margin: 0 auto;
+}
+
+.form-container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.form-container p {
+  font-size: 16px;
+  margin-bottom: 50px;
 }
 
 .form-row {
   flex-direction: column; /* Stack label and input/dropdown vertically */
   align-items: flex-start; /* Align items to the start */
   margin-bottom: 15px;
-  width: 900px;
+  width: 85%;
 }
 
 label {  
   display: block;
-  width: 900px;
+  width: 85% !important;
+  margin-bottom: 10px;
   }
 
 select, input[type="text"], input[type="email"] {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  margin-bottom: 10px; /* Add space below the input/dropdown */
-  width: 900px; /* Make input and dropdown take full width */
-  max-width: 900px; /* Set a fixed max-width for inputs and dropdowns */
+  width: 85% !important; /* Make input and dropdown take full width */
+  max-width: 85% !important;
   box-sizing: border-box; /* Include padding and border in the element's total width */
+  margin-bottom: 50px;
 }
+
 
 .form-button {
   padding: 10px 20px;
