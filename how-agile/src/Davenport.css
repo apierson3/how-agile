@@ -18,12 +18,7 @@
 }
 
 label {  
-  width: 900px;  
-  border-color: brown;  
-  border-width: .25em;  
-  border-style: double;  
-  margin-right: .5em;      
-  float:left;
+  padding: 0 900px;
   }
 
 select, input[type="text"], input[type="email"] {
