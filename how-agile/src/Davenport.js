@@ -89,6 +89,8 @@ const Davenport = () => {
       setTechnologyDescription('');
       setTechnology('');
       setAnalystsDescription('');
+      // Scroll to the top of the page
+      window.scrollTo(0, 0);
       // Show success message 
       setSubmissionSuccess(true);
     } catch (error) {
