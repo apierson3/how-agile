@@ -10,15 +10,13 @@
 }
 
 .form-row {
-  display: flex;
-  flex-direction: column; /* Stack label and input/dropdown vertically */
-  align-items: flex-start; /* Align items to the start */
+  display: block;
   margin-bottom: 15px;
   width: 900px;
 }
 
 label {  
-  padding: 0 900px;
+  width: 900px;
   }
 
 select, input[type="text"], input[type="email"] {
