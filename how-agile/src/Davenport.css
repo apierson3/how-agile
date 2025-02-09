@@ -1,4 +1,6 @@
 .form-container {
+  flex-direction: column;
+	display: flex;
   align-items: center;
   background-color: #f0f0f0;
   padding: 20px;
@@ -8,6 +10,8 @@
 }
 
 .form-row {
+  flex-direction: column; /* Stack label and input/dropdown vertically */
+  align-items: flex-start; /* Align items to the start */
   display: block;
   margin-bottom: 15px;
   width: 900px;
