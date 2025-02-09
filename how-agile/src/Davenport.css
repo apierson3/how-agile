@@ -17,12 +17,14 @@
   width: 900px;
 }
 
-#form-container label {
-  display: inline-block;
-  margin-bottom: 10px; /* Add space below the input/dropdown */
-  width: 900px; /* Make input and dropdown take full width */
-  box-sizing: border-box; /* Include padding and border in the element's total width */
-}
+label {  
+  width: 900px;  
+  border-color: brown;  
+  border-width: .25em;  
+  border-style: double;  
+  margin-right: .5em;      
+  float:left;
+  }
 
 select, input[type="text"], input[type="email"] {
   padding: 10px;
