@@ -1,0 +1,91 @@
+.radio-group {
+    display: flex;
+    gap: 10px; /* Add some space between the radio inputs */
+    align-items: left;
+    margin-bottom: 25px; 
+  }
+  
+  .radio-input-container {
+    display: flex;
+    align-items: left;
+    gap: 5px; /* Add some space between the radio input and the label */
+  }
+
+.form-container {
+    flex-direction: column;
+      display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 75%;
+    margin: 0 auto;
+  }
+  
+  .form-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .form-container p {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+  
+  .form-row {
+    flex-direction: column; /* Stack label and input/dropdown vertically */
+    align-items: flex-start; /* Align items to the start */
+    margin-bottom: 15px;
+    width: 85%;
+  }
+
+  .swot-row {
+    flex-direction: column; /* Stack label and input/dropdown vertically */
+    align-items: flex-start; /* Align items to the start */
+    margin-bottom: 5px;
+    width: 85%;
+  }
+  
+  label {  
+    display: block;
+    width: 85% !important;
+    margin-bottom: 10px;
+    }
+  
+  select, input[type="text"], input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 85% !important; /* Make input and dropdown take full width */
+    max-width: 85% !important;
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    margin-bottom: 50px;
+  }
+  
+  
+  .form-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .form-button:hover {
+    background-color: #45a049;
+  }
+  
+  .results-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-items: center;
+    display: flex;
+  }
+  
