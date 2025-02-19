@@ -6,47 +6,47 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { useNavigate } from "react-router-dom";
 
 const CX = () => {
-  const [capabilityEfforts, setCapabilityEfforts] = useState('');
-  const [capabilityLeadership, setCapabilityLeadership] = useState('');
-  const [capabilityResources, setCapabilityResources] = useState('');
-  const [cxObjectives, setCxObjectives] = useState('');
-  const [metricsMeasures, setMetricsMeasures] = useState('');
-  const [opportunityOne, setOpportunityOne] = useState('');
-  const [opportunityTwo, setOpportunityTwo] = useState('');
-  const [opportunityThree, setOpportunityThree] = useState('');
-  const [strengthOne, setStrengthOne] = useState('');
-  const [strengthTwo, setStrengthTwo] = useState('');
-  const [strengthThree, setStrengthThree] = useState('');
-  const [symptomsAssociates, setSymptomsAssociates] = useState('');
-  const [symptomsAwareness, setSymptomsAwareness] = useState('');
-  const [symptomsBrand, setSymptomsBrand] = useState('');
-  const [symptomsBudget, setSymptomsBudget] = useState('');
-  const [symptomsCustomer, setSymptomsCustomer] = useState('');
-  const [symptomsExecutive, setSymptomsExecutive] = useState('');
-  const [symptomsImprovement, setSymptomsImprovement] = useState('');
-  const [symptomsInnovation, setSymptomsInnovation] = useState('');
-  const [symptomsInsights, setSymptomsInsights] = useState('');
-  const [symptomsListening, setSymptomsListening] = useState('');
-  const [symptomsStrategy, setSymptomsStrategy] = useState('');
-  const [threatOne, setThreatOne] = useState('');
-  const [threatTwo, setThreatTwo] = useState('');
-  const [threatThree, setThreatThree] = useState('');
-  const [weaknessOne, setWeaknessOne] = useState('');
-  const [weaknessTwo, setWeaknessTwo] = useState('');
-  const [weaknessThree, setWeaknessThree] = useState('');    
-  const [userId, setUserId] = useState(null);
-  const [submissionSuccess, setSubmissionSuccess] = useState(false);
+    const [capabilityEfforts, setCapabilityEfforts] = useState('');
+    const [capabilityLeadership, setCapabilityLeadership] = useState('');
+    const [capabilityResources, setCapabilityResources] = useState('');
+    const [cxObjectives, setCxObjectives] = useState('');
+    const [metricsMeasures, setMetricsMeasures] = useState('');
+    const [opportunityOne, setOpportunityOne] = useState('');
+    const [opportunityTwo, setOpportunityTwo] = useState('');
+    const [opportunityThree, setOpportunityThree] = useState('');
+    const [strengthOne, setStrengthOne] = useState('');
+    const [strengthTwo, setStrengthTwo] = useState('');
+    const [strengthThree, setStrengthThree] = useState('');
+    const [symptomsAssociates, setSymptomsAssociates] = useState('');
+    const [symptomsAwareness, setSymptomsAwareness] = useState('');
+    const [symptomsBrand, setSymptomsBrand] = useState('');
+    const [symptomsBudget, setSymptomsBudget] = useState('');
+    const [symptomsCustomer, setSymptomsCustomer] = useState('');
+    const [symptomsExecutive, setSymptomsExecutive] = useState('');
+    const [symptomsImprovement, setSymptomsImprovement] = useState('');
+    const [symptomsInnovation, setSymptomsInnovation] = useState('');
+    const [symptomsInsights, setSymptomsInsights] = useState('');
+    const [symptomsListening, setSymptomsListening] = useState('');
+    const [symptomsStrategy, setSymptomsStrategy] = useState('');
+    const [threatOne, setThreatOne] = useState('');
+    const [threatTwo, setThreatTwo] = useState('');
+    const [threatThree, setThreatThree] = useState('');
+    const [weaknessOne, setWeaknessOne] = useState('');
+    const [weaknessTwo, setWeaknessTwo] = useState('');
+    const [weaknessThree, setWeaknessThree] = useState('');    
+    const [userId, setUserId] = useState(null);
+    const [submissionSuccess, setSubmissionSuccess] = useState(false);
   let navigate = useNavigate();
   const dropdownValues = {
-    '1': "Starting",
-    '2': "Developing",
-    '3': "Managing",
-    '4': "Optimizing",
-    '5' : "Pioneering"
+    'Starting': 1,
+    'Developing': 2,
+    'Managing': 3,
+    'Optimizing': 4,
+    'Pioneering' : 5
   };
   const radioValues = {
-    '0': "No",
-    '1': "Yes"
+    'No': 0,
+    'Yes': 1
   };
 
   const auth = getAuth();
@@ -72,19 +72,24 @@ const CX = () => {
       return;
     }
 
+    // Validate that all fields have valid values before attempting to submit
+  const getValidValue = (value, mapping) => {
+    return mapping[value] !== undefined ? mapping[value] : null; // fallback to null or a default value
+  };
+
     try {
       const docRef = await addDoc(collection(db, "cxCompetencyAssessment"), {
         userId: userId, // Include the user's ID
         capabilityEfforts: capabilityEfforts,
-        capabilityEffortsValue: dropdownValues[capabilityEfforts],
+        capabilityEffortsValue: getValidValue(capabilityEfforts, dropdownValues),
         capabilityLeadership: capabilityLeadership,
-        capabilityLeadershipValue: dropdownValues[capabilityLeadership],
+        capabilityLeadershipValue: getValidValue(capabilityLeadership, dropdownValues),
         capabilityResources: capabilityResources,
-        capabilityResourcesValue: dropdownValues[capabilityResources],
+        capabilityResourcesValue: getValidValue(capabilityResources, dropdownValues),
         cxObjectives: cxObjectives,
-        cxObjectivesValue: dropdownValues[cxObjectives],
+        cxObjectivesValue: getValidValue(cxObjectives, dropdownValues),
         metricsMeasures: metricsMeasures,
-        metricsMeasuresValue: dropdownValues[metricsMeasures],
+        metricsMeasuresValue: getValidValue(metricsMeasures, dropdownValues),
         opportunityOne: opportunityOne,
         opportunityTwo: opportunityTwo,
         opportunityThree: opportunityThree,
@@ -92,27 +97,27 @@ const CX = () => {
         strengthTwo: strengthTwo,
         strengthThree: strengthThree,
         symptomsAssociates: symptomsAssociates,
-        symptomsAssociatesValue: radioValues[symptomsAssociates],
+        symptomsAssociatesValue: getValidValue(symptomsAssociates, radioValues),
         symptomsAwareness: symptomsAwareness,
-        symptomsAwarenessValue: radioValues[symptomsAwareness],
+        symptomsAwarenessValue: getValidValue(symptomsAwareness, radioValues),
         symptomsBrand: symptomsBrand,
-        symptomsBrandValue: radioValues[symptomsBrand],
+        symptomsBrandValue: getValidValue(symptomsBrand, radioValues),
         symptomsBudget: symptomsBudget,
-        symptomsBudgetValue: radioValues[symptomsBudget],
+        symptomsBudgetValue: getValidValue(symptomsBudget, radioValues),
         symptomsCustomer: symptomsCustomer,
-        symptomsCustomerValue: radioValues[symptomsCustomer],
+        symptomsCustomerValue: getValidValue(symptomsCustomer, radioValues),
         symptomsExecutive: symptomsExecutive,
-        symptomsExecutiveValue: radioValues[symptomsExecutive],
+        symptomsExecutiveValue: getValidValue(symptomsExecutive, radioValues),
         symptomsImprovement: symptomsImprovement,
-        symptomsImprovementValue: radioValues[symptomsImprovement],
+        symptomsImprovementValue: getValidValue(symptomsImprovement, radioValues),
         symptomsInnovation: symptomsInnovation,
-        symptomsInnovationValue: radioValues[symptomsInnovation],
+        symptomsInnovationValue: getValidValue(symptomsInnovation, radioValues),
         symptomsInsights: symptomsInsights,
-        symptomsInsightsValue: radioValues[symptomsInsights],
+        symptomsInsightsValue: getValidValue(symptomsInsights, radioValues),
         symptomsListening: symptomsListening,
-        symptomsListeningValue: radioValues[symptomsListening],
+        symptomsListeningValue: getValidValue(symptomsListening, radioValues),
         symptomsStrategy: symptomsStrategy,
-        symptomsStrategyValue: radioValues[symptomsStrategy],
+        symptomsStrategyValue: getValidValue(symptomsStrategy, radioValues),
         threatOne: threatOne,
         threatTwo: threatTwo,
         threatThree: threatThree,
@@ -186,6 +191,7 @@ const CX = () => {
           <option value="Developing">CX formalized programs begin to emerge for gathering feedback</option>
           <option value="Managing">CX is critical and executives are actively involved</option>
           <option value="Optimizing">CX is central to the company strategy</option>
+          <option value="Pioneering">CX is pioneering</option>
         </select>
       </div>
       <div className="form-row">
@@ -197,6 +203,7 @@ const CX = () => {
           <option value="Developing">CX investments in capital begin</option>
           <option value="Managing">Company understands the impact of CX on growth and profit</option>
           <option value="Optimizing">Process shifts from process improvements to innovative breakthroughs</option>
+          <option value="Pioneering">CX is pioneering</option>
         </select>
       </div>
       <div className="form-row">
@@ -209,6 +216,7 @@ const CX = () => {
           <option value="Developing">Intensified focus on problem resolution</option>
           <option value="Managing">Focus on redesigning processes with CX as the centerpiece</option>
           <option value="Optimizing">Employee engagement focuses on cultivating a customer-centric culture</option>
+          <option value="Pioneering">CX is pioneering</option>
         </select>
       </div>
       <h3>Symptoms of Customer Experience Capability</h3>
